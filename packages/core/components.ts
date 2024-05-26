@@ -1,4 +1,4 @@
-import { ErButton } from '@toy-element/components';
+import { CrButton } from '@circle-ui/components';
 import type { Plugin } from 'vite';
 
-export default [ErButton] as Plugin[];
+export default [CrButton] as Plugin[];

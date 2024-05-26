@@ -2,7 +2,7 @@
 <coverage generated="1716121535280" clover="3.2.0">
   <project timestamp="1716121535280" name="All files">
     <metrics statements="41" coveredstatements="41" conditionals="6" coveredconditionals="6" methods="0" coveredmethods="0" elements="47" coveredelements="47" complexity="0" loc="41" ncloc="41" packages="1" files="1" classes="1"/>
-    <file name="Button.vue" path="/Users/lengxingda/my/learning/toy-element/packages/components/Button/Button.vue">
+    <file name="Button.vue" path="/Users/lengxingda/my/learning/circle-ui/packages/components/Button/Button.vue">
       <metrics statements="41" coveredstatements="41" conditionals="6" coveredconditionals="6" methods="0" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>

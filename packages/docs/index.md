@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Toy-Element"
+  name: "circle-ui"
   text: "高仿ElementUI组件库"
   tagline: My great project tagline
   actions:

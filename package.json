@@ -1,14 +1,14 @@
 {
-  "name": "@toy-element/workspace",
+  "name": "@circle-ui/workspace",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "pnpm --filter @toy-element/components test",
-    "dev": "pnpm --filter @toy-element/play dev",
-    "build": "pnpm --filter @toy-element/play build",
-    "docs:dev": "pnpm --filter @toy-element/docs dev",
-    "docs:build": "pnpm --filter @toy-element/docs build"
+    "test": "pnpm --filter @circle-ui/components test",
+    "dev": "pnpm --filter @circle-ui/play dev",
+    "build": "pnpm --filter @circle-ui/play build",
+    "docs:dev": "pnpm --filter @circle-ui/docs dev",
+    "docs:build": "pnpm --filter @circle-ui/docs build"
   },
   "keywords": [],
   "author": "",
@@ -32,9 +32,9 @@
   "dependencies": {
     "lodash-es": "^4.17.21",
     "vue": "^3.4.19",
-    "toy-element": "workspace:*",
-    "@toy-element/hooks": "workspace:*",
-    "@toy-element/utils": "workspace:*",
-    "@toy-element/theme": "workspace:*"
+    "circle-ui": "workspace:*",
+    "@circle-ui/hooks": "workspace:*",
+    "@circle-ui/utils": "workspace:*",
+    "@circle-ui/theme": "workspace:*"
   }
 }

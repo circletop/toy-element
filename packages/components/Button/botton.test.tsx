@@ -11,7 +11,7 @@ describe("Button", () => {
         const wrapper = mount(Button, {
           props: { type: type as any },
         });
-        expect(wrapper.classes()).toContain(`er-button--${type}`);
+        expect(wrapper.classes()).toContain(`cr-button--${type}`);
       });
     });
   
@@ -22,7 +22,7 @@ describe("Button", () => {
         const wrapper = mount(Button, {
           props: { size: size as any },
         });
-        expect(wrapper.classes()).toContain(`er-button--${size}`);
+        expect(wrapper.classes()).toContain(`cr-button--${size}`);
       });
     });
   

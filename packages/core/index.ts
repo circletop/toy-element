@@ -1,7 +1,7 @@
-import { makeInstall } from '@toy-element/utils';
+import { makeInstall } from '@circle-ui/utils';
 import components from './components';
-import '@toy-element/theme/index.css'
+import '@circle-ui/theme/index.css'
 const installer = makeInstall(components);
 
-export * from '@toy-element/components';
+export * from '@circle-ui/components';
 export default installer

@@ -47,8 +47,6 @@ pnpm install
 │   ├── play
 │   ├── theme
 │   └── utils
-├── pnpm-lock.yaml
-├── pnpm-workspace.yaml
 ├── postcss.config.cjs
 ├── readMe
 ├── tsconfig.json

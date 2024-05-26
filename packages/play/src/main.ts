@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
-import toyElement from 'toy-element'
+import CrUi from 'circle-ui'
 
-createApp(App).use(toyElement).mount('#app')
+createApp(App).use(CrUi).mount('#app')

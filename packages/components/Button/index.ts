@@ -1,4 +1,4 @@
 import Button from './Button.vue';
-import { withInstall } from '@toy-element/utils';
+import { withInstall } from '@circle-ui/utils';
 
-export const  ErButton =withInstall(Button);
+export const  CrButton =withInstall(Button);

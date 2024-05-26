@@ -3,11 +3,11 @@
     :is="props.tag"
     ref="_ref"
     :type="props.tag === 'button'?props.nativeType: void 0"
-    class="er-button"
+    class="cr-button"
     :disabled="disabled || loading ? true : void 0"
     :class="{
-      [`er-button--${type}`]: type,
-      [`er-button--${size}`]: size,
+      [`cr-button--${type}`]: type,
+      [`cr-button--${size}`]: size,
       'is-disabled': disabled,
       'is-loading': loading,
       'is-plain': plain,
@@ -24,7 +24,7 @@
 import type { ButtonProps } from './types'
 
   defineOptions({
-    name: 'ErButton'
+    name: 'CrButton'
     
   })
 
@@ -37,5 +37,5 @@ import type { ButtonProps } from './types'
 </script>
 
 <style scoped>
-
+@import "./style.css";
 </style>
