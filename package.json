@@ -6,6 +6,7 @@
   "scripts": {
     "test": "pnpm --filter @circle-ui/components test",
     "dev": "pnpm --filter @circle-ui/play dev",
+    "story": "pnpm --filter @circle-ui/play storybook",
     "build": "pnpm --filter @circle-ui/play build",
     "docs:dev": "pnpm --filter @circle-ui/docs dev",
     "docs:build": "pnpm --filter @circle-ui/docs build"
@@ -35,6 +36,9 @@
     "circle-ui": "workspace:*",
     "@circle-ui/hooks": "workspace:*",
     "@circle-ui/utils": "workspace:*",
-    "@circle-ui/theme": "workspace:*"
+    "@circle-ui/theme": "workspace:*",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6"
   }
 }

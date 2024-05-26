@@ -1,4 +1,4 @@
-import type { Component } from "vue";
+import type { Component, Ref } from "vue";
 
 export type ButtonType = "primary" | "success" | "warning" | "info" | 'danger';
 export type NativeType = 'button' | 'submit' | 'reset';
@@ -25,4 +25,19 @@ export interface ButtonProps {
   circle?: boolean; 
   /** 自定义图标 */
   icon?: string;
+  /** loading图标 */
+  loadingIcon?: string;
+ /** 是否自动获取焦点 */
+  autoFocus?: boolean;
+  /** 是否开启节流模式 */
+  useThrottle?: boolean;
+  throttleDuration?: number;
+}
+
+export interface ButtonEmits {
+  (e: 'click', val: MouseEvent): void; 
+}
+
+export interface ButtonInstance {
+  ref: Ref<HTMLButtonElement | void>
 }

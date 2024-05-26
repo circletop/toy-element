@@ -1,4 +1,4 @@
-import { CrButton } from '@circle-ui/components';
+import { CrButton, CrIcon } from '@circle-ui/components';
 import type { Plugin } from 'vite';
 
-export default [CrButton] as Plugin[];
+export default [CrButton, CrIcon] as Plugin[];
