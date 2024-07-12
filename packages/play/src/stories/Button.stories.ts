@@ -100,7 +100,17 @@ export const ButtonGroup: Story & { args: { content1: string, content2: string; 
           <cr-button v-bind="args">{{args.content2}}</cr-button>
         </cr-button-group>`
       )
-  })
+  }),
+  play: async ({ canvasElement, args, step }) => {
+    const canvas = within(canvasElement);
+    await step("click btn1", async () => {
+      await userEvent.click(canvas.getByText("Button1"));
+    });
+    await step("click btn2", async () => {
+      await userEvent.click(canvas.getByText("Button2"));
+    });
+    expect(args.onClick).toHaveBeenCalled();
+  },
 }
 
 export default meta;
