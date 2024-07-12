@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "circle-ui"
   text: "高仿ElementUI组件库"
-  tagline: My great project tagline
+  tagline: "基于 Vue 3，面向设计师和开发者的组件库"
   actions:
     - theme: brand
       text: Markdown Examples

@@ -1,7 +1,7 @@
 import { type Meta, type StoryObj, type ArgTypes } from '@storybook/vue3';
 import { fn, within, userEvent,expect } from '@storybook/test';
 
-import { CrButton } from 'circle-ui';
+import { CrButton, CrButtonGroup } from 'circle-ui';
 
 type Story = StoryObj<typeof CrButton> & { argTypes?: ArgTypes; };
 
@@ -62,6 +62,45 @@ export const Default: Story & { args: { content: string; }; } = {
     })
     expect(args.onClick).toHaveBeenCalled();
   }
+}
+export const ButtonGroup: Story & { args: { content1: string, content2: string; }; } = {
+  argTypes: {
+    groupType: {
+      control: { type: "select" },
+      options: ["primary", "success", "warning", "danger", "info", ""],
+    },
+    groupSize: {
+      control: { type: "select" },
+      options: ["large", "default", "small", ""],
+    },
+    groupDisabled: {
+      control: "boolean",
+    },
+    content1: {
+      control: { type: "text" },
+      defaultValue: "Button1",
+    },
+    content2: {
+      control: { type: "text" },
+      defaultValue: "Button2",
+    }
+  },
+  args: {
+    round: true,
+    content1: "Button1",
+    content2: "Button2",
+  },
+  render: (args) => ({
+    components: { CrButton, CrButtonGroup },
+    setup() { return { args }; },
+    template:
+      container(`
+        <cr-button-group :size="args.groupSize" :type="args.groupType" :disabled="args.groupDisabled">
+          <cr-button v-bind="args">{{args.content1}}</cr-button>
+          <cr-button v-bind="args">{{args.content2}}</cr-button>
+        </cr-button-group>`
+      )
+  })
 }
 
 export default meta;

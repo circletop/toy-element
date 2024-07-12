@@ -1,9 +1,10 @@
-import { describe, it, t, expect, vi } from "vitest";
+import { describe, it, expect, test } from "vitest";
 
 import { mount } from '@vue/test-utils'
 import Button from "./Button.vue";
+import ButtonGroup from "./ButtonGroup.vue";
 
-describe("Button", () => {
+describe("Button.vue", () => {
     // Props: type
     it("should has the correct type class when type prop is set", () => {
       const types = ["primary", "success", "warning", "danger", "info"];
@@ -68,5 +69,57 @@ describe("Button", () => {
       await wrapper.trigger("click");
       expect(wrapper.emitted().click).toHaveLength(1);
     });  
+
+})
+
+describe('ButtonGroup', () => {
+  test("basic button group", async () => {
+    const wrapper = mount(() => (
+      <ButtonGroup>
+        <Button>button 1</Button>
+        <Button>button 2</Button>
+      </ButtonGroup>
+    ));
+    expect(wrapper.classes()).toContain("cr-button-group");
+  });
+
+  test("button group with size", async () => {
+    const sizes = ["large", "default", "small"];
+    sizes.forEach((size) => {
+      const wrapper = mount(() => (
+        <ButtonGroup size={size}>
+          <Button>button 1</Button>
+          <Button>button 2</Button>
+        </ButtonGroup>
+      ));
+      const buttonWrapper = wrapper.findComponent(Button);
+      expect(buttonWrapper.classes()).toContain(`cr-button--${size}`);
+    })
+  })
+
+  it("should has the correct type class when button group type prop is set", () => {
+    const types = ["primary", "success", "warning", "danger", "info"];
+    types.forEach((type) => {
+      const wrapper = mount(() => (
+        <ButtonGroup type={type}>
+          <Button>button 1</Button>
+          <Button>button 2</Button>
+        </ButtonGroup>
+      ));
+      const buttonWrapper = wrapper.findComponent(Button);
+      expect(buttonWrapper.classes()).toContain(`cr-button--${type}`);
+    });
+  });
+
+  it("button group disabled", () => {
+    const wrapper = mount(() => (
+      <ButtonGroup disabled>
+        <Button>button 1</Button>
+        <Button>button 2</Button>
+      </ButtonGroup>
+    ));
+    const buttonWrapper = wrapper.findComponent(Button);
+    expect(buttonWrapper.classes()).toContain(`is-disabled`);
+  });
 
 })
