@@ -28,6 +28,7 @@
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "packages/**/*.vue",
-    "packages/play/src/stories/Button.stories.js"
+    "packages/play/src/stories/Button.stories.js",
+    "packages/components/Collapse/collapse.txxt11.111"
   ]
 }
