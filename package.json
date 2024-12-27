@@ -36,6 +36,7 @@
     "circle-ui": "workspace:*",
     "@circle-ui/hooks": "workspace:*",
     "@circle-ui/utils": "workspace:*",
+    "@circle-ui/constants": "workspace:*",
     "@circle-ui/theme": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",

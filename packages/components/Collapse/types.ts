@@ -17,6 +17,6 @@ export interface CollapseContext {
 }
 
 export type CollapseEmits = {
-  'update:modelValue': (names: CollapseItemName[]) => void;
-  'change': (names: CollapseItemName[]) => void;
+  'update:modelValue': (names: CollapseItemName | CollapseItemName[]) => void;
+  'change': (names: CollapseItemName | CollapseItemName[]) => void;
 }

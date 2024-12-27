@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@circle-ui/constants':
+        specifier: workspace:*
+        version: link:packages/constants
       '@circle-ui/hooks':
         specifier: workspace:*
         version: link:packages/hooks
@@ -97,6 +100,8 @@ importers:
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
+
+  packages/constants: {}
 
   packages/core:
     dependencies:
@@ -3198,7 +3203,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.4.27(typescript@5.4.5)
-      vue-component-type-helpers: 2.0.19
+      vue-component-type-helpers: 2.1.10
     transitivePeerDependencies:
       - encoding
       - prettier
@@ -8476,6 +8481,10 @@ packages:
 
   /vue-component-type-helpers@2.0.19:
     resolution: {integrity: sha512-cN3f1aTxxKo4lzNeQAkVopswuImUrb5Iurll9Gaw5cqpnbTAxtEMM1mgi6ou4X79OCyqYv1U1mzBHJkzmiK82w==}
+    dev: true
+
+  /vue-component-type-helpers@2.1.10:
+    resolution: {integrity: sha512-lfgdSLQKrUmADiSV6PbBvYgQ33KF3Ztv6gP85MfGaGaSGMTXORVaHT1EHfsqCgzRNBstPKYDmvAV9Do5CmJ07A==}
     dev: true
 
   /vue-demi@0.14.7(vue@3.4.27):
