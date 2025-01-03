@@ -1,5 +1,5 @@
 <template>
-  <div class="collapse">
+  <div class="cr-collapse">
     <slot />
   </div>
 </template>
@@ -15,7 +15,7 @@ import type {CollapseProps, CollapseItemName, CollapseEmits} from './types'
     accordion: false,
     modelValue: ()=> [] as CollapseItemName[]
   });
-  const emit = defineEmits<CollapseEmits>({
+  const emit = defineEmits({
     'update:modelValue': (names: CollapseItemName | CollapseItemName[]) => { },
     'change': (names: CollapseItemName | CollapseItemName[]) => { }
   });
@@ -27,4 +27,6 @@ import type {CollapseProps, CollapseItemName, CollapseEmits} from './types'
 
 </script>
 
-<style></style>
+<style>
+@import './style.css';
+</style>
